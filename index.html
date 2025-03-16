@@ -38,17 +38,17 @@
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             letter-spacing: -0.05em;
         }
 
         h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             letter-spacing: -0.03em;
         }
 
         h3 {
-            font-size: 2rem;
+            font-size: 1.75rem;
             letter-spacing: -0.02em;
         }
 
@@ -57,7 +57,7 @@
         }
 
         p {
-            font-size: 1.125rem;
+            font-size: 1rem;
             color: var(--light);
             line-height: 1.8;
             margin-bottom: 1.5rem;
@@ -77,14 +77,14 @@
         .nav-container {
             max-width: 1440px;
             margin: 0 auto;
-            padding: 1.5rem 2rem;
+            padding: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--light);
             text-decoration: none;
@@ -109,7 +109,8 @@
 
         .nav-links {
             display: flex;
-            gap: 3rem;
+            gap: 1.5rem;
+            align-items: center;
         }
 
         .nav-links a {
@@ -119,7 +120,7 @@
             position: relative;
             padding: 0.5rem 0;
             transition: all 0.3s ease;
-            font-size: 1.125rem;
+            font-size: 1rem;
         }
 
         .nav-links a::after {
@@ -141,8 +142,15 @@
             width: 100%;
         }
 
+        .menu-icon {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--light);
+            cursor: pointer;
+        }
+
         .hero {
-            padding: 18rem 2rem 10rem;
+            padding: 10rem 1rem 5rem;
             text-align: center;
             background: var(--gradient-1);
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -151,7 +159,7 @@
         }
 
         .hero h2 {
-            font-size: 3.5rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
             line-height: 1.1;
             font-weight: 700;
@@ -160,7 +168,7 @@
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1rem;
             color: var(--light);
             max-width: 800px;
             margin: 0 auto;
@@ -169,16 +177,16 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1rem;
         }
 
         .section {
-            margin: 6rem 0;
+            margin: 3rem 0;
         }
 
         .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
             position: relative;
             display: inline-block;
             font-weight: 700;
@@ -199,14 +207,14 @@
 
         .mission-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
         .card {
             background: var(--secondary);
-            padding: 2.5rem;
+            padding: 1.5rem;
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.4s ease;
@@ -238,57 +246,57 @@
         }
 
         .card-icon {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 1rem;
         }
 
         .card-icon i {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--light);
         }
 
         .card h3 {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             margin-bottom: 1rem;
             color: var(--light);
         }
 
         .card p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--light);
             line-height: 1.6;
         }
 
         .cta-section {
             background: var(--gradient-1);
-            padding: 8rem 2rem;
-            margin: 8rem 0;
+            padding: 4rem 1rem;
+            margin: 4rem 0;
             text-align: center;
             clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
         }
 
         .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            margin-bottom: 1rem;
             color: var(--light);
         }
 
         .cta-section p {
-            font-size: 1.25rem;
+            font-size: 1rem;
             color: var(--light);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .button {
             display: inline-flex;
             align-items: center;
-            padding: 1.2rem 3rem;
+            padding: 1rem 2rem;
             background: var(--light);
             color: var(--dark-2);
             font-weight: 600;
@@ -323,37 +331,37 @@
 
         footer {
             background: var(--dark-2);
-            padding: 6rem 2rem;
+            padding: 3rem 1rem;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .footer-brand h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--light);
-        }
-
-        .footer-brand p {
-            font-size: 1rem;
-            color: var(--light);
-        }
-
-        .footer-contact h4,
-        .footer-social h4 {
             font-size: 1.25rem;
             margin-bottom: 1rem;
             color: var(--light);
         }
 
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: var(--light);
+        }
+
+        .footer-contact h4,
+        .footer-social h4 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            color: var(--light);
+        }
+
         .footer-contact p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--light);
             margin-bottom: 0.5rem;
             display: flex;
@@ -367,12 +375,12 @@
 
         .social-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         .social-links a {
-            width: 48px;
-            height: 48px;
+            width: 40px;
+            height: 40px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             display: flex;
@@ -389,35 +397,63 @@
 
         .footer-bottom {
             text-align: center;
-            margin-top: 2rem;
-            padding-top: 2rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .footer-bottom p {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--light);
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            h3 {
-                font-size: 1.75rem;
+            .menu-icon {
+                display: block;
             }
 
             .nav-links {
-                gap: 1.5rem;
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: var(--secondary);
+                width: 100%;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             }
 
-            .mission-cards {
-                grid-template-columns: 1fr;
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero {
+                padding: 8rem 1rem 4rem;
+            }
+
+            .hero h2 {
+                font-size: 1.75rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.75rem;
+            }
+
+            .cta-section p {
+                font-size: 0.9rem;
+            }
+
+            .button {
+                padding: 0.8rem 1.5rem;
             }
         }
     </style>
@@ -426,7 +462,10 @@
     <header class="header">
         <nav class="nav-container">
             <a href="index.html" class="logo">AI Panamá</a>
-            <div class="nav-links">
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="nav-links">
                 <a href="index.html">Inicio</a>
                 <a href="nosotros.html">Nosotros</a>
                 <a href="contacto.html">Contacto</a>
@@ -540,6 +579,14 @@
                 header.style.background = "rgba(18, 18, 18, 0.95)";
                 header.style.boxShadow = "0 2px 15px rgba(0,0,0,0.1)";
             }
+        });
+
+        // Menú de hamburguesa
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>
