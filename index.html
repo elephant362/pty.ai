@@ -149,82 +149,117 @@
             color: var(--light);
             cursor: pointer;
         }
+        /* Hero Section Mejorado */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12rem 2rem 6rem;
+    text-align: center;
+    background: var(--gradient-1);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    gap: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Agregar sombra sutil */
+}
 
-       /* Hero Section Mejorado */
-        .hero {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 12rem 2rem 6rem;
-            text-align: center;
-            background: var(--gradient-1);
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-            position: relative;
-            overflow: hidden;
-            min-height: 100vh;
-            gap: 1.5rem;
-        }
-        
-        .hero h2 {
-            font-size: clamp(3rem, 5vw, 5rem);
-            margin-bottom: 1rem;
-            line-height: 1.2;
-            font-weight: 700;
-            color: var(--light);
-            animation: fadeIn 1.2s ease-in-out;
-        }
-        
-        .hero p {
-            font-size: clamp(1.4rem, 2vw, 1.8rem);
-            color: var(--light);
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-            opacity: 0.9;
-            animation: slideUp 1.4s ease-in-out;
-        }
-        
-        .hero .cta-button {
-            padding: 1rem 2.5rem;
-            font-size: 1.6rem;
-            background-color: var(--accent);
-            color: var(--light);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
-        
-        .hero .cta-button:hover {
-            background-color: var(--accent-dark);
-            transform: translateY(-5px);
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 8rem 1rem 4rem;
-                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-                gap: 1rem;
-            }
-        
-            .hero .cta-button {
-                font-size: 1.4rem;
-                padding: 0.8rem 2rem;
-            }
-        }
+/* Animación Hero Title */
+.hero h2 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--light);
+    animation: fadeIn 1.2s ease-in-out;
+    letter-spacing: 0.5px; /* Añadir espaciado para un toque moderno */
+    text-transform: uppercase; /* Hacer el texto en mayúsculas para darle más impacto */
+}
 
+/* Descripción */
+.hero p {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    color: var(--light);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    opacity: 0.9;
+    animation: slideUp 1.4s ease-in-out;
+    font-family: 'Helvetica Neue', sans-serif; /* Fuente moderna y limpia */
+}
+
+/* Botón CTA */
+.hero .cta-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.6rem;
+    background-color: var(--accent);
+    color: var(--light);
+    border: none;
+    border-radius: 50px; /* Botón con bordes redondeados más suaves */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra ligera para un toque profesional */
+    font-weight: bold;
+}
+
+/* Efecto Hover Botón */
+.hero .cta-button:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombras más intensas en hover */
+}
+
+/* Efectos de animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto de Fondo con Desenfoque */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Desenfoque del fondo para dar profundidad */
+    z-index: -1;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero {
+        padding: 8rem 1rem 4rem;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+        gap: 1rem;
+    }
+
+    .hero .cta-button {
+        font-size: 1.4rem;
+        padding: 0.8rem 2rem;
+    }
+}
 
         
         /* Responsivo */
