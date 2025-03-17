@@ -163,11 +163,12 @@
             position: relative;
             overflow: hidden;
             min-height: 100vh;
+            gap: 1.5rem;
         }
         
         .hero h2 {
             font-size: clamp(3rem, 5vw, 5rem);
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             line-height: 1.2;
             font-weight: 700;
             color: var(--light);
@@ -184,6 +185,22 @@
             animation: slideUp 1.4s ease-in-out;
         }
         
+        .hero .cta-button {
+            padding: 1rem 2.5rem;
+            font-size: 1.6rem;
+            background-color: var(--accent);
+            color: var(--light);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .hero .cta-button:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-5px);
+        }
+        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -193,6 +210,22 @@
             from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 8rem 1rem 4rem;
+                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+                gap: 1rem;
+            }
+        
+            .hero .cta-button {
+                font-size: 1.4rem;
+                padding: 0.8rem 2rem;
+            }
+        }
+
+
         
         /* Responsivo */
         @media (max-width: 768px) {
