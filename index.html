@@ -147,76 +147,71 @@
             display: none;
             font-size: 1
                 /* Hero Section Mejorado */
-            /* Hero Section Mejorado (Futurista) */
+        /* Hero Section Futurista Minimalista */
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15rem 2rem 6rem; /* Más espacio para dar impacto visual */
+    padding: 12rem 2rem 6rem;
     text-align: center;
-    background: linear-gradient(45deg, #111, #004d70); /* Fondo oscuro con gradiente azul */
+    background: linear-gradient(135deg, #0a0a0a, #1f1f1f); /* Fondo oscuro moderno */
     position: relative;
     overflow: hidden;
     min-height: 100vh;
-    gap: 2rem;
-    color: white;
+    gap: 1.5rem;
 }
 
-/* Título futurista */
+/* Título principal */
 .hero h2 {
-    font-size: clamp(3rem, 6vw, 6rem); /* Título grande y llamativo */
-    margin-bottom: 1.5rem;
+    font-size: clamp(2.5rem, 4vw, 4.5rem); /* Tamaño más equilibrado */
+    margin-bottom: 1rem;
     line-height: 1.2;
-    font-weight: 800; /* Mayor grosor */
-    color: #00f5ff; /* Color brillante cian neón */
+    font-weight: 700;
+    color: #ffffff; /* Blanco puro */
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Efecto de luz */
     animation: fadeIn 1.5s ease-in-out;
-    text-shadow: 0 0 15px rgba(0, 245, 255, 0.8), 0 0 30px rgba(0, 245, 255, 0.6); /* Sombra de neón */
 }
 
-/* Descripción futurista */
+/* Subtítulo */
 .hero p {
-    font-size: clamp(1.4rem, 2vw, 2rem);
-    color: #e0e0e0;
-    max-width: 900px;
+    font-size: clamp(1.2rem, 1.6vw, 1.8rem);
+    color: rgba(255, 255, 255, 0.8); /* Blanco suave */
+    max-width: 800px;
     margin: 0 auto;
-    line-height: 1.8;
-    opacity: 0.8;
+    line-height: 1.6;
     animation: slideUp 1.8s ease-in-out;
-    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
-    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y elegante */
 }
 
-/* Botón CTA futurista */
+/* Botón CTA */
 .hero .cta-button {
-    padding: 1.2rem 3rem;
-    font-size: 1.8rem;
-    background-color: #00f5ff; /* Color cian brillante */
+    padding: 1rem 2.5rem;
+    font-size: 1.4rem;
+    background-color: #ffffff;
     color: #1c1c1c;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     font-weight: bold;
-    box-shadow: 0 6px 15px rgba(0, 245, 255, 0.6); /* Sombra brillante */
     text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Brillo sutil */
 }
 
-/* Hover Efecto Futurista en el botón */
 .hero .cta-button:hover {
-    background-color: #00b8b8;
-    transform: translateY(-6px);
-    box-shadow: 0 10px 20px rgba(0, 245, 255, 0.8); /* Sombras más intensas */
-    animation: glow 1.5s infinite alternate; /* Efecto de brillo en el hover */
+    background-color: #e0e0e0;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
 }
 
-/* Animaciones para el fadeIn y slideUp */
+/* Animaciones */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-30px);
     }
     to {
         opacity: 1;
@@ -235,76 +230,39 @@
     }
 }
 
-/* Glow Animation para el hover del botón */
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff, 0 0 30px #00f5ff;
-    }
-    100% {
-        box-shadow: 0 0 25px #00b8b8, 0 0 50px #00b8b8, 0 0 75px #00b8b8;
-    }
-}
-
-/* Fondo y Efectos Visuales (Futuristas) */
+/* Efecto de luces en el fondo */
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(20px); /* Desenfoque fuerte para dar profundidad */
-    z-index: -1;
-}
-
-/* Efecto de Partículas (Opcional) */
-.hero::after {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300px;
-    height: 300px;
-    background: url('particles.svg') no-repeat center center;
-    animation: moveParticles 6s linear infinite; /* Movimiento de partículas */
-    z-index: -2;
-}
-
-@keyframes moveParticles {
-    0% {
-        transform: scale(1) translate(-50%, -50%);
-        opacity: 0.3;
-    }
-    50% {
-        transform: scale(1.5) translate(-50%, -50%);
-        opacity: 0.5;
-    }
-    100% {
-        transform: scale(1) translate(-50%, -50%);
-        opacity: 0.3;
-    }
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
     .hero {
-        padding: 10rem 1rem 5rem;
+        padding: 8rem 1rem 4rem;
     }
 
     .hero h2 {
-        font-size: clamp(2.5rem, 5vw, 4.5rem); /* Título más pequeño en móviles */
+        font-size: clamp(2rem, 5vw, 3.5rem);
     }
 
     .hero p {
-        font-size: clamp(1.2rem, 2vw, 1.6rem);
+        font-size: clamp(1rem, 2vw, 1.4rem);
     }
 
     .hero .cta-button {
-        font-size: 1.6rem;
-        padding: 1rem 2.5rem;
+        font-size: 1.2rem;
+        padding: 0.8rem 2rem;
     }
 }
+
 
 
 
