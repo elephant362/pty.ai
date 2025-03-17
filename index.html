@@ -149,73 +149,70 @@
             color: var(--light);
             cursor: pointer;
         }
+        
+        /* Hero Section Mejorado */
         /* Hero Section Mejorado */
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 12rem 2rem 6rem;
+    padding: 15rem 2rem 6rem; /* Más espacio para dar impacto visual */
     text-align: center;
-    background: var(--gradient-1);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    background: linear-gradient(45deg, #0f0f0f, #3a3a3a); /* Fondo oscuro y moderno */
     position: relative;
     overflow: hidden;
     min-height: 100vh;
-    gap: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Agregar sombra sutil */
+    gap: 2rem;
 }
 
-/* Animación Hero Title */
 .hero h2 {
-    font-size: clamp(3rem, 5vw, 5rem);
-    margin-bottom: 1rem;
+    font-size: clamp(3rem, 6vw, 6rem); /* Título más grande y audaz */
+    margin-bottom: 1.5rem;
     line-height: 1.2;
-    font-weight: 700;
-    color: var(--light);
-    animation: fadeIn 1.2s ease-in-out;
-    letter-spacing: 0.5px; /* Añadir espaciado para un toque moderno */
-    text-transform: uppercase; /* Hacer el texto en mayúsculas para darle más impacto */
+    font-weight: 800; /* Mayor grosor */
+    color: #00f5ff; /* Color futurista para resaltar */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeIn 1.5s ease-in-out; /* Animación más fluida */
+    text-shadow: 2px 2px 10px rgba(0, 245, 255, 0.6); /* Sombra sutil y futurista */
 }
 
-/* Descripción */
 .hero p {
-    font-size: clamp(1.4rem, 2vw, 1.8rem);
-    color: var(--light);
-    max-width: 800px;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    color: #ffffff;
+    max-width: 900px;
     margin: 0 auto;
     line-height: 1.8;
-    opacity: 0.9;
-    animation: slideUp 1.4s ease-in-out;
-    font-family: 'Helvetica Neue', sans-serif; /* Fuente moderna y limpia */
+    opacity: 0.8;
+    animation: slideUp 1.8s ease-in-out; /* Animación suave para el párrafo */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna y limpia */
 }
 
-/* Botón CTA */
 .hero .cta-button {
-    padding: 1rem 2.5rem;
-    font-size: 1.6rem;
-    background-color: var(--accent);
-    color: var(--light);
+    padding: 1.2rem 3rem;
+    font-size: 1.8rem;
+    background-color: #00f5ff; /* Color brillante para el botón */
+    color: #1c1c1c;
     border: none;
-    border-radius: 50px; /* Botón con bordes redondeados más suaves */
+    border-radius: 50px; /* Borde redondeado */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra ligera para un toque profesional */
     font-weight: bold;
+    box-shadow: 0 6px 15px rgba(0, 245, 255, 0.4); /* Sombra destacada */
 }
 
-/* Efecto Hover Botón */
 .hero .cta-button:hover {
-    background-color: var(--accent-dark);
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombras más intensas en hover */
+    background-color: #00b8b8; /* Cambio de color suave al hacer hover */
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 245, 255, 0.6); /* Sombra más intensa */
 }
 
-/* Efectos de animación */
+/* Animaciones */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-40px);
     }
     to {
         opacity: 1;
@@ -234,7 +231,7 @@
     }
 }
 
-/* Efecto de Fondo con Desenfoque */
+/* Fondo y Efectos Visuales */
 .hero::before {
     content: '';
     position: absolute;
@@ -243,23 +240,49 @@
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px); /* Desenfoque del fondo para dar profundidad */
+    backdrop-filter: blur(15px); /* Desenfoque más fuerte para crear profundidad */
     z-index: -1;
+}
+
+/* Efecto de partículas para un toque de IA futurista (opcional) */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: url('particles.svg') no-repeat center center; /* Agrega un fondo de partículas o un diseño futurista */
+    animation: moveParticles 5s linear infinite;
+    z-index: -2;
+}
+
+@keyframes moveParticles {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0.3; }
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
     .hero {
-        padding: 8rem 1rem 4rem;
-        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-        gap: 1rem;
+        padding: 10rem 1rem 5rem; /* Ajuste de padding para pantallas pequeñas */
+    }
+
+    .hero h2 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem); /* Título más pequeño en móviles */
+    }
+
+    .hero p {
+        font-size: clamp(1.2rem, 2vw, 1.6rem);
     }
 
     .hero .cta-button {
-        font-size: 1.4rem;
-        padding: 0.8rem 2rem;
+        font-size: 1.6rem;
+        padding: 1rem 2.5rem;
     }
 }
+
 
         
         /* Responsivo */
