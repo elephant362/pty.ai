@@ -63,6 +63,7 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Header */
         .header {
             background: rgba(18, 18, 18, 0.95);
             backdrop-filter: blur(20px);
@@ -112,7 +113,7 @@
             gap: 1.5rem;
             align-items: center;
         }
-        
+
         .nav-links a {
             color: var(--light);
             text-decoration: none;
@@ -122,7 +123,7 @@
             transition: all 0.3s ease;
             font-size: 1.1rem;
         }
-        
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -133,15 +134,15 @@
             background: var(--light);
             transition: width 0.4s ease;
         }
-        
+
         .nav-links a:hover {
             color: var(--accent);
         }
-        
+
         .nav-links a:hover::after {
             width: 100%;
         }
-        
+
         .menu-icon {
             display: none;
             font-size: 1.8rem;
@@ -149,7 +150,7 @@
             cursor: pointer;
         }
 
-
+        /* Hero Section */
         .hero {
             padding: 18rem 2rem 10rem;
             text-align: center;
@@ -205,91 +206,65 @@
             background: var(--light);
             border-radius: 2px;
         }
-        :root {
-    --secondary: #2a2a2a;
-    --light: #ffffff;
-    --shadow: rgba(255, 255, 255, 0.1);
-    --highlight: rgba(255, 255, 255, 0.08);
-    --hover-shadow: rgba(255, 255, 255, 0.2);
-}
 
-.team {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    margin-top: 3rem;
-}
+        /* Team Section */
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
 
-.team-member {
-    background: var(--secondary);
-    padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid var(--highlight);
-    transition: all 0.4s ease-in-out;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 5px 15px var(--shadow);
-}
+        .team-member {
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+        }
 
-.team-member:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px var(--hover-shadow);
-    border-color: var(--light);
-}
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+            border-color: var(--light);
+        }
 
-.team-member:focus {
-    outline: 2px solid var(--light);
-}
+        .team-member-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 4px solid var(--light);
+            background-color: rgba(255, 255, 255, 0.08);
+            object-fit: cover;
+            display: block;
+            aspect-ratio: 1 / 1;
+        }
 
-.team-member-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-    border: 4px solid var(--light);
-    background-color: var(--highlight);
-    object-fit: cover;
-    display: block;
-    aspect-ratio: 1 / 1;
-}
+        .team-member-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--light);
+            font-weight: bold;
+        }
 
-.team-member-name {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--light);
-    font-weight: bold;
-}
+        .team-member-role {
+            font-size: 1.2rem;
+            color: var(--light);
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
 
-.team-member-role {
-    font-size: 1.2rem;
-    color: var(--light);
-    margin-bottom: 1rem;
-    opacity: 0.8;
-}
+        .team-member-bio {
+            font-size: 1rem;
+            color: var(--light);
+            line-height: 1.6;
+        }
 
-.team-member-bio {
-    font-size: 1rem;
-    color: var(--light);
-    line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .team {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .team-member {
-        padding: 1.5rem;
-    }
-
-    .team-member-img {
-        width: 120px;
-        height: 120px;
-    }
-}
-
-
+        /* Footer */
         footer {
             background: var(--dark-2);
             color: white;
@@ -312,9 +287,26 @@
             color: var(--accent);
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
             .nav-links {
                 display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background: var(--secondary);
+                width: 100%;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
             }
 
             .hero h2 {
@@ -331,7 +323,10 @@
     <header class="header">
         <nav class="nav-container">
             <a href="index.html" class="logo">AI Panamá</a>
-            <div class="nav-links">
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="nav-links">
                 <a href="index.html">Inicio</a>
                 <a href="nosotros.html">Nosotros</a>
                 <a href="contacto.html">Contacto</a>
@@ -340,7 +335,6 @@
         </nav>
     </header>
 
-    
     <main class="container">
         <section id="nosotros" class="section">
             <h2 class="section-title">Sobre Nosotros</h2>
@@ -384,8 +378,23 @@
     </footer>
 
     <script>
-        const sections = document.querySelectorAll('.section');
+        // Menú móvil
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
 
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', (event) => {
+            if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Animaciones al hacer scroll
+        const sections = document.querySelectorAll('.section');
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
