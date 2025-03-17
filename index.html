@@ -145,13 +145,7 @@
 
         .menu-icon {
             display: none;
-            font-size: 1.8rem;
-            color: var(--light);
-            cursor: pointer;
-        }
-        
-        /* Hero Section Mejorado */
-        /* Hero Section Mejorado */
+            font-size: 1/* Hero Section Mejorado */
 .hero {
     display: flex;
     flex-direction: column;
@@ -263,6 +257,32 @@
     100% { transform: scale(1); opacity: 0.3; }
 }
 
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero {
+        padding: 10rem 1rem 5rem; /* Ajuste de padding para pantallas pequeñas */
+    }
+
+    .hero h2 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem); /* Título más pequeño en móviles */
+    }
+
+    .hero p {
+        font-size: clamp(1.2rem, 2vw, 1.6rem);
+    }
+
+    .hero .cta-button {
+        font-size: 1.6rem;
+        padding: 1rem 2.5rem;
+    }
+}
+.8rem;
+            color: var(--light);
+            cursor: pointer;
+        }
+        
+        /* Hero Section Mejorado */
+           
 /* Responsivo */
 @media (max-width: 768px) {
     .hero {
