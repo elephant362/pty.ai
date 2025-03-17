@@ -171,7 +171,6 @@
             line-height: 1.2;
             font-weight: 700;
             color: var(--light);
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
             animation: fadeIn 1.2s ease-in-out;
         }
         
@@ -194,6 +193,15 @@
             from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 8rem 1rem 4rem;
+                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            }
+        }
+
         
         /* Responsivo */
         @media (max-width: 768px) {
