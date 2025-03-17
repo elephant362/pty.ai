@@ -112,7 +112,7 @@
             gap: 1.5rem;
             align-items: center;
         }
-
+        
         .nav-links a {
             color: var(--light);
             text-decoration: none;
@@ -122,7 +122,7 @@
             transition: all 0.3s ease;
             font-size: 1.1rem;
         }
-
+        
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -133,14 +133,22 @@
             background: var(--light);
             transition: width 0.4s ease;
         }
-
+        
         .nav-links a:hover {
             color: var(--accent);
         }
-
+        
         .nav-links a:hover::after {
             width: 100%;
         }
+        
+        .menu-icon {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--light);
+            cursor: pointer;
+        }
+
 
         .hero {
             padding: 18rem 2rem 10rem;
