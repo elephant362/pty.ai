@@ -245,18 +245,19 @@
         }
 
 
+
         /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 1rem;
         }
-
+        
         /* Section */
         .section {
             margin: 3rem 0;
         }
-
+        
         .section-title {
             font-size: 2rem;
             margin-bottom: 1.5rem;
@@ -266,7 +267,7 @@
             color: var(--light);
             text-align: center;
         }
-
+        
         .section-title::after {
             content: '';
             position: absolute;
@@ -277,7 +278,7 @@
             background: var(--light);
             border-radius: 2px;
         }
-
+        
         /* Mission Cards */
         .mission-cards {
             display: grid;
@@ -285,7 +286,7 @@
             gap: 1.5rem;
             margin-top: 2rem;
         }
-
+        
         .card {
             background: var(--secondary);
             padding: 1.5rem;
@@ -295,17 +296,17 @@
             position: relative;
             overflow: hidden;
         }
-
+        
         .card::before {
             content: none; /* Desactivar el efecto de brillo */
         }
-
+        
         .card:hover {
             transform: none; /* Eliminar la transformación en hover */
             box-shadow: none; /* Eliminar la sombra en hover */
             border-color: rgba(255, 255, 255, 0.08); /* Mantener el color del borde original */
         }
-
+        
         .card-icon {
             width: 60px;
             height: 60px;
@@ -316,22 +317,40 @@
             justify-content: center;
             margin: 0 auto 1rem;
         }
-
+        
         .card-icon i {
             font-size: 1.8rem;
             color: var(--light);
         }
-
+        
         .card h3 {
             font-size: 1.4rem;
             margin-bottom: 1rem;
             color: var(--light);
         }
-
+        
         .card p {
             font-size: 1rem;
             color: var(--light);
             line-height: 1.8;
+        }
+        
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 8rem 1rem 4rem;
+                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+                gap: 1rem;
+            }
+        
+            .hero .cta-button {
+                font-size: 1.4rem;
+                padding: 0.8rem 2rem;
+            }
+        
+            .mission-cards {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* CTA Section */
