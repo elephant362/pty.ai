@@ -348,8 +348,24 @@
         }
 
         @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
             .nav-links {
                 display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background: var(--secondary);
+                width: 100%;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
             }
 
             .hero h2 {
@@ -366,7 +382,10 @@
     <header class="header">
         <nav class="nav-container">
             <a href="index.html" class="logo">AI Panamá</a>
-            <div class="nav-links">
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="nav-links">
                 <a href="index.html" aria-label="Ir a inicio">Inicio</a>
                 <a href="nosotros.html" aria-label="Conocer sobre nosotros">Nosotros</a>
                 <a href="contacto.html" aria-label="Contacto">Contacto</a>
@@ -424,6 +443,21 @@
     </section>
         
     <script>
+        // Menú móvil
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', (event) => {
+            if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+
         // Animación al hacer scroll
         const sections = document.querySelectorAll('.section');
         
